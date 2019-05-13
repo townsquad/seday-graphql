@@ -1,0 +1,19 @@
+{
+  "name": "seday-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "example-I": "node app/example-I/index.js",
+    "example-II": "node app/example-II/index.js",
+    "example-III": "node app/example-III/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.5.0",
+    "axios": "^0.18.0",
+    "gql": "^1.1.2",
+    "graphql": "^14.3.0"
+  }
+}
