@@ -2,27 +2,27 @@
   <b-container>
     <h2>Add Bands</h2>
     <b-form>
-      <b-form-group label="Name:"  label-for="input-1">
+      <b-form-group label="Name:"  label-for="name-input">
         <b-form-input
-          id="input-1"
+          id="name-input"
           v-model="band.name"
           required
           placeholder="Band Name"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group label="Country:" label-for="input-2">
+      <b-form-group label="Country:" label-for="country-input">
         <b-form-input
-          id="input-2"
+          id="country-input"
           v-model="band.country"
           required
           placeholder="Country"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group label="Genre:" label-for="input-3">
+      <b-form-group label="Genre:" label-for="genre-input">
         <b-form-input
-          id="input-3"
+          id="genre-input"
           v-model="band.genres"
           required
           placeholder="Band Genres"

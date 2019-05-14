@@ -31,6 +31,39 @@
         "Rap Rock",
         "Alternative Rock"
       ]
+    },
+    {
+      "name": "asdad",
+      "country": "adadad",
+      "genre": [
+        "adasasd"
+      ],
+      "id": 4
+    },
+    {
+      "name": "11111",
+      "country": "11111",
+      "genre": [
+        "111111"
+      ],
+      "id": 5
+    },
+    {
+      "name": "3333",
+      "country": "3333",
+      "genre": [
+        "333323"
+      ],
+      "id": 6
+    },
+    {
+      "name": "44555",
+      "country": "555",
+      "genre": [
+        "55555",
+        " 5555"
+      ],
+      "id": 7
     }
   ],
   "albums": [

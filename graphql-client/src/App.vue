@@ -10,7 +10,9 @@
             <b-nav-item to="/band">Add Band</b-nav-item> 
           </b-navbar-nav>
         </b-navbar>
-        <router-view></router-view>
+        <div class="main">
+          <router-view></router-view>
+        </div>
       </div>
     </body>
   </html>
@@ -25,3 +27,8 @@ export default {
 }
 </script>
 
+<style>
+  .main {
+    margin-top: 16px
+  }
+</style>
