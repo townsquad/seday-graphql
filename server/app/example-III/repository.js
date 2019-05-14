@@ -28,13 +28,24 @@ const findSongsByAlbumId = function(albumId) {
     return get(`/albums/${albumId}/songs`);
 }
 
+const addBand = function(band) {
+    return post(`/bands`, band);
+}
+
+const addAlbum = function(bandId, album) {
+    album.bandId = bandId;
+    return post(`/albums`, album);
+}
+
 const addSong = function(albumId, song) {
     song.albumId = albumId;
-    return post(`/albums/${albumId}/songs`, song);
+    return post(`/songs`, song);
 }
 
 module.exports.findBand = findBand;
 module.exports.findAllBands = findAllBands;
 module.exports.findAlbumsByBandId = findAlbumsByBandId;
 module.exports.findSongsByAlbumId = findSongsByAlbumId;
+module.exports.addBand = addBand;
+module.exports.addAlbum = addAlbum;
 module.exports.addSong = addSong;

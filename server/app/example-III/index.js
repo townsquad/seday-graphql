@@ -1,7 +1,11 @@
 const { ApolloServer, gql } = require('apollo-server');
-const { findBand, findAllBands,
-     findAlbumsByBandId, findSongsByAlbumId,
-     addSong } = require('./repository')
+const { findBand,
+        findAllBands,
+        findAlbumsByBandId,
+        findSongsByAlbumId,
+        addBand,
+        addAlbum,
+        addSong } = require('./repository')
 
 const typeDefs = gql`
   type Band {
@@ -25,9 +29,20 @@ const typeDefs = gql`
     duration : Float
   }
 
+  input BandInput {
+    name: String!
+    country: String!
+    genre: [String]
+  }
+
+  input AlbumInput {
+    name: String!
+    releaseYear: Int
+  }
+
   input SongInput {
-    name : String
-    duration : Float
+    name: String!
+    duration: Float
   }
 
   type Query {
@@ -36,9 +51,10 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addSong(albumId : ID!, song : SongInput!) : Song
+    addBand(band: BandInput!): Band
+    addAlbum(bandId: ID!, album: AlbumInput!): Album
+    addSong(albumId: ID!, song: SongInput!) : Song
   }
-
 `;
 
 const resolvers = {
@@ -49,6 +65,12 @@ const resolvers = {
     }
   },
   Mutation: {
+    addBand(_, args) {
+      return addBand(args.band);
+    },
+    addSong(_, args) {
+      return addAlbum(args.bandId, args.album);
+    },
     addSong(_, args) {
       return addSong(args.albumId, args.song);
     }

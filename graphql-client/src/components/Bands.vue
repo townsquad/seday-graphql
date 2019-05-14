@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <h3> Bands </h3>
-    <div>
-      <b-table stacked striped :items="bands" :fields="fields" />
-    </div>    
-  </div>  
+  <b-container>
+    <h2>Bands</h2>
+    <b-table striped :items="bands" :fields="fields" />
+  </b-container>
 </template>
 
 <script>
